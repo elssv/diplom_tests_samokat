@@ -1,7 +1,8 @@
 # Задание 1
 
 SELECT c.login
-FROM "Orders" AD o JOIN "Couriers" AS c ON o."courierId" = c.id
+FROM "Orders" AS o
+JOIN "Couriers" AS c ON o."courierId" = c.id
 WHERE o."inDelivery" = true
 GROUP BY c.login;
 
